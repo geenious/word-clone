@@ -4,15 +4,15 @@ import GuessInput from '../GuessInput/GuessInput';
 import Header from '../Header';
 
 function App() {
-  const [wordGuess, setWordGuess] = React.useState('');
+  const [guesses, setGuesses] = React.useState([]);
 
   return (
     <div className="wrapper">
       <Header />
 
       <div className="game-wrapper">
-        <Game wordGuess={wordGuess} />
-        <GuessInput setWordGuess={setWordGuess} />
+        <Game guesses={guesses} />
+        <GuessInput guesses={guesses} setGuesses={setGuesses} />
       </div>
     </div>
   );
