@@ -48,9 +48,12 @@ button {
 
 header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: var(--header-height);
   border-bottom: 1px solid var(--color-gray-700);
   color: var(--color-gray-300);
+  padding: 0 32px;
 }
 
 header .side {
@@ -59,8 +62,18 @@ header .side {
   place-content: center;
 }
 
+header button {
+  width: 24px;
+  height: 24px;
+  transition: transform 300ms ease-in-out;
+}
+
+header button:hover {
+  transform: rotate(-360deg);
+  transform-origin: center;
+}
+
 h1 {
-  flex: 1;
   font-size: 2rem;
   line-height: var(--header-height);
   text-align: center;
